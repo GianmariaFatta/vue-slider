@@ -13,3 +13,31 @@
 // 3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
 
 console.log("ok vue", Vue);
+
+const app = Vue.createApp({
+    data(){
+        return{
+            currentIndex: 0,
+            pictures:[
+                {
+                    image: 'img/01.webp',
+                    title: 'Marvel\'s Spiderman Miles Morale',
+                  }, {
+                    image: 'img/02.webp',
+                    title: 'Ratchet & Clank: Rift Apart',
+                  }, {
+                    image: 'img/03.webp',
+                    title: 'Fortnite',
+                  }, {
+                    image: 'img/04.webp',
+                    title: 'Stray',
+                  }, {
+                    image: 'img/05.webp',
+                    title: "Marvel's Avengers",
+                  }
+            ]
+        }
+    }
+});
+
+app.mount("#root")

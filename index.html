@@ -13,35 +13,24 @@
     <script defer src="js/script.js" ></script>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
+    <div class="container" id="root">
+        <div class="row" >
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <span><i id="prev-button" class="fa-solid fa-circle-arrow-left fa-xl"></i></span> 
+                
+                <!-- <span><i id="prev-button" class="fa-solid fa-circle-arrow-left fa-xl"></i></span>  -->
+
                 <div id="carousel" class="carousel position-relative  ">
                     <div id="gallery" class="gallery ">
-                        <h1 class= > lorem ipsum Dolor Sit</h1>
-                        <p class="  ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus architecto sed officia tempora sunt. </p>
-                        <img src="img/01.webp"  alt="" class="" >
-                        <img src="img/02.webp"  alt="" class="" >
-                        <img src="img/03.webp"  alt="" class="" >
-                        <img src="img/04.webp"  alt="" class="" >
-                        <img src="img/05.webp"  alt="" class="" >
+                        <img v-for="(pic, i) in pictures" :src="pic.image"  :alt="pic.title" :class="{'active' : i=== currentIndex} " >
+                        
                     </div>
-                </div> 
-                <!-- <div class="carousel position-relative  ">
-                    <h1 class= > lorem ipsum Dolor Sit</h1>
-                    <p class="  ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus architecto sed officia tempora sunt. </p>
-                    <img src="img/02.webp"  alt="" class=" w-100 " >
-                </div><!-->
+                </div>
                     
-                <span><i id="next-button" class="fa-solid fa-circle-arrow-right fa-xl position-absolute "></i></span>
+                <!-- <span><i id="next-button" class="fa-solid fa-circle-arrow-right fa-xl position-absolute "></i></span> -->
             </div>
             <div id="thumbnails" class="">
-                <img src="img/01.webp"  alt="" class="" >
-                <img src="img/02.webp"  alt="" class="" >
-                <img src="img/03.webp"  alt="" class="" >
-                <img src="img/04.webp"  alt="" class="" >
-                <img src="img/05.webp"  alt="" class="" >
+                <img v-for="(pic, i) in pictures" :src="pic.image"  :alt="pic.title" :class="{'active' : i=== currentIndex} ">
+                
             </div>
         </div>
     </div>
