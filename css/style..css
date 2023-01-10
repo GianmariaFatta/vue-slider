@@ -1,7 +1,7 @@
 
 
 .col-12{
-    padding:150px 150px 10px 150px;
+    padding:150px 150px 20px 150px;
 }
 .carousel{
         width: 1000px;
@@ -25,7 +25,7 @@
     object-fit: cover;
     width: 100%;
     height:100%;
-    display:none;
+    /* display:none; */
 }
     .carousel h1{
         display:none;
@@ -45,7 +45,7 @@
 
 .fa-circle-arrow-left , .fa-circle-arrow-right {
    margin:10px;
-   font-size:35px;
+   font-size:45px;
    cursor:pointer;
 }
 
@@ -72,7 +72,7 @@ p{
 
 #thumbnails{
     width:1000px;
-    margin:20px auto;
+    margin:20px 193px;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -89,4 +89,12 @@ p{
 .active{
     border:6px solid darkred;
     display:flex
+}
+
+#thumbnails img:hover{
+    transform: scale(1.05);
+}
+
+.arrow:hover{
+    color:blue
 }

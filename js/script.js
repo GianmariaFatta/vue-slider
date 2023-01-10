@@ -37,7 +37,27 @@ const app = Vue.createApp({
                   }
             ]
         }
+    },
+
+    methods:{
+        goToPrev(){
+        this.currentIndex--
+        if(this.currentIndex<0){
+            this.currentIndex=Object.keys(this.pictures).length -1
+        }
+    },
+        goToNext(){
+        this.currentIndex++
+        if(this.currentIndex===Object.keys(this.pictures).length){
+            this.currentIndex=0
+        }
+    },
+        setCurrentIndex(target){
+            this.currentIndex=target
+        }
+    
     }
+
 });
 
 app.mount("#root")

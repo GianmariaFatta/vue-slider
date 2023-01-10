@@ -17,19 +17,19 @@
         <div class="row" >
             <div class="col-12 d-flex justify-content-center align-items-center">
                 
-                <!-- <span><i id="prev-button" class="fa-solid fa-circle-arrow-left fa-xl"></i></span>  -->
+                <span class="arrow"><i @click="goToPrev" id="prev-button" class="fa-solid fa-circle-arrow-left fa-xl"></i></span> 
 
                 <div id="carousel" class="carousel position-relative  ">
                     <div id="gallery" class="gallery ">
-                        <img v-for="(pic, i) in pictures" :src="pic.image"  :alt="pic.title" :class="{'active' : i=== currentIndex} " >
+                        <img v-show="i === currentIndex" v-for="(pic, i) in pictures" :src="pic.image"  :alt="pic.title" :class="" >
                         
                     </div>
                 </div>
                     
-                <!-- <span><i id="next-button" class="fa-solid fa-circle-arrow-right fa-xl position-absolute "></i></span> -->
+                <span class="arrow"><i @click="goToNext" id="next-button" class="fa-solid fa-circle-arrow-right fa-xl position-absolute "></i></span>
             </div>
             <div id="thumbnails" class="">
-                <img v-for="(pic, i) in pictures" :src="pic.image"  :alt="pic.title" :class="{'active' : i=== currentIndex} ">
+                <img v-for="(pic, i) in pictures" :src="pic.image"  :alt="pic.title" :class="{'active' : i=== currentIndex} " @click="setCurrentIndex(i)">
                 
             </div>
         </div>
