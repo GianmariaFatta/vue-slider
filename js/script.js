@@ -43,12 +43,12 @@ const app = Vue.createApp({
         goToPrev(){
         this.currentIndex--
         if(this.currentIndex<0){
-            this.currentIndex=Object.keys(this.pictures).length -1
+            this.currentIndex=this.pictures.length -1
         }
     },
         goToNext(){
         this.currentIndex++
-        if(this.currentIndex===Object.keys(this.pictures).length){
+        if(this.currentIndex===this.pictures.length){
             this.currentIndex=0
         }
     },
